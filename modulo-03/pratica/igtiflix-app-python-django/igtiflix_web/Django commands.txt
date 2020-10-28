@@ -1,0 +1,5 @@
+python -m venv venv
+pip install django
+django-admin startproject igtiflix_web
+python manage.py startapp 
+python manage.py runserver
