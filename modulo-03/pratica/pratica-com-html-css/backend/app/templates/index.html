@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>{{ titulo }}</title>
+</head>
+
+<body>
+    <h1>Prática com HTML e CSS</h1>
+    <div>
+        <form onsubmit="/genero" method="post" novalidate>
+            <div>
+                {{ form.csrf_token }}
+                {{ form.nome.label }}
+                {{ form.nome }}
+                {% for e in form.nome.errors %}
+                <span style="color: red;">{{ e }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.submeter }}
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
